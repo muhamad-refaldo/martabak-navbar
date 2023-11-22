@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@600&display=swap');
+
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+nav ul li {
+    font-family: 'Dancing Script', cursive;
+}
+
+nav ul li .online-order {
+    font-family: 'Bebas Neue', sans-serif;
+}

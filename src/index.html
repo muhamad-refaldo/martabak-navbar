@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martabak aldo</title>
+    <!-- style tailwind -->
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- style pribadi -->
+    <link rel="stylesheet" href="/src/input.css">
+    <!-- icon -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="/src/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- js alpain -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-zinc-900">
+    <!-- navbar start -->
+    <nav x class="mx-auto bg-amber-600 py-9 px-4" x-data="{navOpen : true}">
+        <div class="flex justify-between items-center">
+            <h1 class="font-bold text-4xl bg-gradient-to-r from-blue-500 to-red-600 bg-clip-text text-transparent items-center">martabak aldo</h1>
+            <img @click="navOpen = ! navOpen" src="/assets/img/list-ul-alt-svgrepo-com (3).svg" alt="toogle" class="lg:hidden w-10 h-10 cursor-pointer">
+            <div class="hidden sm:block">
+                <ul class="flex gap-12">
+                    <li class="text-white font-bold text-2xl hover:text-blue-500 hover:duration-700">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="text-white font-bold text-2xl  hover:text-blue-500 hover:duration-700">
+                        <a href="#">cerita</a>
+                    </li>
+                    <li class="text-white font-bold text-2xl  hover:text-blue-500 hover:duration-700">
+                        <a href="#">menu</a>
+                    </li>
+                    <li class="text-white font-bold text-2xl  hover:text-blue-500 hover:duration-700">
+                        <a href="#">kontak</a>
+                    </li>
+                    <li class=" text-white font-bold text-3xl">
+                        <a href="#" class="online-order mr-10 bg-gradient-to-r from-purple-500 via-cyan-600 to-red-600 bg-clip-text text-transparent">online order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div x-show="navOpen" class="fixed bottom-0 right-0 left-0 p-4 lg:hidden"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90">
+            <ul class="flex justify-between text-white">
+                <li class=" hover:text-sky-500 duration-700">
+                    <button href="#" class="flex justify-center flex-col items-center gap-1">
+                        <ion-icon name="home-outline" class="text-2xl opacity-50"></ion-icon>
+                        <span class="font-bold opacity-50">home</span>
+                    </button>
+                </li>
+                <li class=" hover:text-sky-500 duration-700">
+                    <button href="#" class="flex justify-center flex-col items-center gap-1">
+                        <ion-icon name="book-outline" class="text-2xl opacity-50"></ion-icon>
+                        <span class="font-bold opacity-50">cerita</span>
+                    </button>
+                </li>
+                <li class=" hover:text-red-500 duration-700">
+                    <button href="#" class="flex justify-center flex-col items-center gap-1 bg-gradient-to-r from-purple-700 via-cyan-600 to-slate-700 bg-clip-text text-transparent">
+                        <i class="ph ph-shopping-cart text-4xl"></i>
+                        <span class="font-bold">online order</span>
+                    </button>
+                </li>
+                <li class=" hover:text-sky-500 duration-700">
+                    <button href="#" class="flex justify-center flex-col items-center gap-1">
+                        <ion-icon name="fast-food-outline" class="text-2xl opacity-50"></ion-icon>
+                        <span class="font-bold opacity-50">menu</span>
+                    </button>
+                </li>
+                <li class=" hover:text-sky-500 duration-700">
+                    <button href="#" class="flex justify-center flex-col items-center gap-1">
+                        <ion-icon name="call-outline" class="text-2xl opacity-50"></ion-icon>
+                        <span class="font-bold opacity-50">kontak</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
